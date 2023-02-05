@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Recipes from '../components/Recipes';
 import ContextAPP from '../context/ContextAPP';
-import Footer from '../components/Footer';
 
 function Drinks() {
   const { drinkResults } = useContext(ContextAPP);

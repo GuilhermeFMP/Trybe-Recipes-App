@@ -64,7 +64,7 @@ function Recipes(props) {
           }
           return (
             <button
-              key={ categories.strCategory }
+              key={ index }
               data-testid={ `${categories.strCategory}-category-filter` }
               value={ categories.strCategory }
               onClick={ onHandleFilter }

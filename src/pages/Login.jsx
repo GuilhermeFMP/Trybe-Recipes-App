@@ -35,6 +35,7 @@ export default function Login() {
           type="submit"
           disabled={ !isButtonDisable }
           onClick={ savedLocalStorage }
+          name="submit"
         >
           Submit
 

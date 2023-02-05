@@ -37,12 +37,9 @@ function InProgress() {
   useEffect(() => {
     if (checked !== null || checked !== undefined) {
       const values = Object.values(checked);
-      console.log(values.length);
-      console.log(quantity);
       setDisabled(true);
       if (values.length === quantity) {
         const every = values.some((value) => (value === false));
-        console.log(every);
         setDisabled(every);
       }
     }

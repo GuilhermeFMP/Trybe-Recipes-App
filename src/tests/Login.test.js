@@ -1,8 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
 import App from '../App';
-import LoginProvider from '../context/LoginProvider';
 
 describe('Testes da página de Login', () => {
   const email = 'email-input';
@@ -10,11 +8,7 @@ describe('Testes da página de Login', () => {
   const button = 'login-submit-btn';
   const emailTest = 'test@test.com';
   beforeEach(() => {
-    render(
-      <LoginProvider>
-        <App />
-      </LoginProvider>,
-    );
+    renderWithRouter(<App />);
   });
   it('Tela de Login possui input de email e senha', () => {
     const emailInput = screen.getByTestId(email);
